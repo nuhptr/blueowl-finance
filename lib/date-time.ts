@@ -1,4 +1,4 @@
-// FORMAT DATE TIME
+// Formatted Date and Time Utils
 export const formatDateTime = (dateString: Date) => {
    const dateTimeOptions: Intl.DateTimeFormatOptions = {
       weekday: "short", // abbreviated weekday name (e.g., 'Mon')
@@ -28,12 +28,16 @@ export const formatDateTime = (dateString: Date) => {
       hour12: true, // use 12-hour clock (true) or 24-hour clock (false)
    }
 
+   // example output: "Mon, Oct 25, 8:30 AM"
    const formattedDateTime: string = new Date(dateString).toLocaleString("en-US", dateTimeOptions)
 
+   // example output: "Mon, Oct 25, 2023"
    const formattedDateDay: string = new Date(dateString).toLocaleString("en-US", dateDayOptions)
 
+   // example output: "Oct 25, 2023"
    const formattedDate: string = new Date(dateString).toLocaleString("en-US", dateOptions)
 
+   // example output: "8:30 AM"
    const formattedTime: string = new Date(dateString).toLocaleString("en-US", timeOptions)
 
    return {
