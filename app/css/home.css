@@ -1,0 +1,50 @@
+@layer utilities {
+   /** Home */
+   .home {
+      @apply no-scrollbar flex w-full flex-row max-xl:max-h-screen max-xl:overflow-y-scroll;
+   }
+
+   .home-content {
+      @apply no-scrollbar flex w-full flex-1 flex-col gap-8 px-5 sm:px-8 py-7 lg:py-12 xl:max-h-screen xl:overflow-y-scroll;
+   }
+
+   .home-header {
+      @apply flex flex-col justify-between gap-8;
+   }
+
+   .total-balance {
+      @apply flex w-full items-center gap-4 rounded-xl border border-gray-200 p-4 shadow-chart sm:gap-6 sm:p-6;
+   }
+
+   .total-balance-chart {
+      @apply flex size-full max-w-[100px] items-center sm:max-w-[120px];
+   }
+
+   .total-balance-label {
+      @apply text-14 font-medium text-gray-600;
+   }
+
+   .total-balance-amount {
+      @apply text-24 lg:text-30 flex-1 font-semibold text-gray-900;
+   }
+
+   .recent-transactions {
+      @apply flex w-full flex-col gap-6;
+   }
+
+   .view-all-btn {
+      @apply text-14 rounded-lg border border-gray-300 px-4 py-2.5 font-semibold text-gray-700;
+   }
+
+   .recent-transactions {
+      @apply flex w-full flex-col gap-6;
+   }
+
+   .recent-transactions-label {
+      @apply text-20 md:text-24 font-semibold text-gray-900;
+   }
+
+   .recent-transactions-tablist {
+      @apply custom-scrollbar mb-8 flex w-full flex-nowrap;
+   }
+}
