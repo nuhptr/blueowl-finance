@@ -43,6 +43,6 @@
    }
 
    .profile-email {
-      @apply font-normal text-gray-600 text-16;
+      @apply font-normal text-gray-600 text-16 mt-1;
    }
 }
