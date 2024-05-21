@@ -1,7 +1,7 @@
-import AnimatedCounter from "./AnimatedCounter"
-import DoughnutChart from "./DoughnutChart"
+import { AnimatedCounter } from "@/components/root/AnimatedCounter"
+import { DoughnutChart } from "@/components/root/DoughnutChart"
 
-export default function TotalBalanceBox({
+export function TotalBalanceBox({
    accounts = [],
    totalBanks,
    totalCurrentBalance,

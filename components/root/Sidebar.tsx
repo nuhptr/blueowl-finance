@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
 import { sidebarLinks } from "@/constant"
 
 /** `user` props in root.d.ts */
-export default function Sidebar({ user }: SidebarProps) {
+export function Sidebar({ user }: SidebarProps) {
    const pathname = usePathname()
 
    return (

@@ -4,11 +4,12 @@ import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from "./ui/sheet"
 import { sidebarLinks } from "@/constant"
 import { cn } from "@/lib/utils"
 
-export default function MobileNav({ user }: MobileNavProps) {
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from "../ui/sheet"
+
+export function MobileNav({ user }: MobileNavProps) {
    const pathname = usePathname()
 
    return (
