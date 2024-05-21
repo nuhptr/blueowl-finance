@@ -16,6 +16,7 @@ const ibmPlexSerif = IBM_Plex_Serif({
    variable: "--font-ibm-plex-serif", // custom variable name
 })
 
+// Metadata for SEO
 export const metadata: Metadata = {
    title: "Horizon | Banking",
    description:
