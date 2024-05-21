@@ -8,7 +8,7 @@
    }
 
    .header-2 {
-      @apply text-18 font-semibold text-gray-900;
+      @apply font-semibold text-gray-900 text-18;
    }
 
    .text-10 {

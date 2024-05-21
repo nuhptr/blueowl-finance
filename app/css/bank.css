@@ -3,12 +3,12 @@
       @apply flex flex-col justify-between gap-8 px-6 py-8;
    }
 
-   /** My Banks */
+   /* My Banks */
    .my-banks {
-      @apply flex h-screen max-h-screen w-full flex-col gap-8 bg-gray-25 p-8 xl:py-12;
+      @apply flex flex-col w-full h-screen max-h-screen gap-8 p-8 bg-gray-25 xl:py-12;
    }
 
-   /** Bank Card */
+   /* Bank Card */
    .bank-card {
       @apply relative flex h-[190px] w-full max-w-[320px] justify-between rounded-[20px] border border-white bg-bank-gradient shadow-creditCard backdrop-blur-[6px];
    }
@@ -21,13 +21,18 @@
       @apply flex size-full flex-1 flex-col items-end justify-between rounded-r-[20px] bg-bank-gradient bg-cover bg-center bg-no-repeat py-5 pr-5;
    }
 
-   /** Bank Info */
+   /* Bank Info */
    .bank-info {
       @apply gap-[18px] flex p-4 transition-all border bg-blue-25 border-transparent;
    }
 
-   /** Bank Info Content */
+   /* Bank Info Content */
    .bank-info_content {
-      @apply flex flex-1 items-center justify-between gap-2 overflow-hidden;
+      @apply flex items-center justify-between flex-1 gap-2 overflow-hidden;
+   }
+
+   /* Banktab */
+   .banktab-item {
+      @apply gap-[18px] border-b-2 flex px-2 sm:px-4 py-2 transition-all;
    }
 }
