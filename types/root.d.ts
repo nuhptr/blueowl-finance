@@ -15,10 +15,16 @@ declare interface DoughnutChartProps {
    accounts: Account[]
 }
 
+declare interface MobileNavProps {
+   user: User
+}
+
 declare interface SidebarProps {
    user: User
 }
 
-declare interface MobileNavProps {
+declare interface RightSidebarProps {
    user: User
+   transactions: Transaction[]
+   banks: Bank[] & Account[]
 }
