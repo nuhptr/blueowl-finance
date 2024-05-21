@@ -1,8 +1,23 @@
 # Horizon Banking Dashboard
 
-Build a banking dashboard using Nextjs, Tailwind CSS, and Chartjs.
+Build a banking dashboard with integrated account banking and show the user's transactions, balance, and more using chart.js & react-chartjs-2.
 
 <!-- Image goes here -->
+
+## Getting Started
+
+-  Clone the repository
+-  Install the dependencies
+-  Change `.env.example` to `.env` and fill in the environment variables
+-  Run the development server
+
+```bash
+git clone
+cd horizon-banking
+bun install
+cp .env.example .env
+bun dev
+```
 
 ## Features
 
@@ -31,6 +46,8 @@ Build a banking dashboard using Nextjs, Tailwind CSS, and Chartjs.
 -  [React Countop](https://www.npmjs.com/package/react-countup) - React component wrapper around CountUp.js (bun add react-countup)
 -  [Chart.js](https://www.chartjs.org/) - Simple yet flexible JavaScript charting for designers & developers (bun add chart.js)
 -  [React Chartjs 2](https://www.npmjs.com/package/react-chartjs-2) - React wrapper for Chart.js 2 (bun add react-chartjs-2)
+-  [React Hook Form](https://react-hook-form.com/) - Performant, flexible and extensible forms with easy-to-use validation (bun add react-hook-form)
+-  [@Hookform Resolvers](https://www.npmjs.com/package/@hookform/resolvers) - Resolvers for React Hook Form (bun add @hookform/resolvers)
 
 -  [Postcss Import](https://www.npmjs.com/package/postcss-import) - PostCSS plugin to transform @import rules by inlining content (bun add -D postcss-import)
 
@@ -52,7 +69,6 @@ List components used in the project
 
 ```bash
 npx shadcn-ui@latest add sheet (@radix-ui/react-dialog)
+npx shadcn-ui@latest add form (@hookform/resolvers, @radix-ui/react-label, react-hook-form)
 npx shadcn-ui@latest add ...
 ```
-
-## Getting Started
