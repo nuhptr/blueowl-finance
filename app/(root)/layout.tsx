@@ -1,7 +1,7 @@
 import Image from "next/image"
 
-import MobileNav from "@/components/MobileNav"
-import Sidebar from "@/components/Sidebar"
+import { MobileNav } from "@/components/root/MobileNav"
+import { Sidebar } from "@/components/root/Sidebar"
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
    const loggedIn = { firstName: "Nuhptr", lastName: "Developer" }
@@ -18,7 +18,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                   <MobileNav user={loggedIn} />
                </div>
             </div>
-
             {children}
          </div>
       </main>
