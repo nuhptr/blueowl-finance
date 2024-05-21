@@ -80,7 +80,7 @@
 
    /* START: Transactions  */
    .transactions {
-      @apply flex flex-col w-full max-h-screen gap-8 p-8 overflow-y-scroll bg-gray-25 xl:py-12;
+      @apply flex flex-col w-full gap-8 p-8 overflow-y-scroll max-h-dvh bg-gray-25 xl:py-12;
    }
 
    .transactions-header {
@@ -128,7 +128,7 @@
 
    /* START: Auth */
    .auth-asset {
-      @apply sticky top-0 flex items-center justify-end w-full h-screen bg-sky-1 max-lg:hidden;
+      @apply sticky top-0 flex items-center justify-end w-full h-dvh bg-sky-1 max-lg:hidden;
    }
 
    .auth-form {
