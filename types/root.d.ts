@@ -1,35 +1,36 @@
-declare interface HeaderBoxProps {
+//* (Root) folder types
+declare type HeaderBoxProps = {
    type?: "title" | "greeting"
    title: string
    subtext: string
    user?: string
 }
 
-declare interface TotalBalanceBoxProps {
+declare type TotalBalanceBoxProps = {
    accounts: Account[]
    totalBanks: number
    totalCurrentBalance: number
 }
 
-declare interface DoughnutChartProps {
+declare type DoughnutChartProps = {
    accounts: Account[]
 }
 
-declare interface MobileNavProps {
+declare type MobileNavProps = {
    user: User
 }
 
-declare interface SidebarProps {
+declare type SidebarProps = {
    user: User
 }
 
-declare interface RightSidebarProps {
+declare type RightSidebarProps = {
    user: User
    transactions: Transaction[]
    banks: Bank[] & Account[]
 }
 
-declare interface CreditCardProps {
+declare type CreditCardProps = {
    account: Account
    userName: string
    showBalance?: boolean

@@ -1,16 +1,18 @@
-declare interface AuthFormProps {
+//* Auth types
+declare type AuthFormProps = {
    type: "sign-in" | "sign-up"
 }
 
 declare type SignUpParams = {
-   firstName: string
-   lastName: string
-   address1: string
-   city: string
-   state: string
-   postalCode: string
-   dateOfBirth: string
-   ssn: string
+   //* make it optional
+   firstName?: string
+   lastName?: string
+   address1?: string
+   city?: string
+   state?: string
+   postalCode?: string
+   dateOfBirth?: string
+   ssn?: string
    email: string
    password: string
 }
@@ -20,7 +22,7 @@ declare type LoginUser = {
    password: string
 }
 
-declare interface signInProps {
+declare type signInProps = {
    email: string
    password: string
 }

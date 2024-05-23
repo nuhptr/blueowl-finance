@@ -1,3 +1,4 @@
+//* Global Types
 declare type SearchParamProps = {
    params: { [key: string]: string }
    searchParams: { [key: string]: string | string[] | undefined }
@@ -112,13 +113,13 @@ declare type NewDwollaCustomerParams = {
    ssn: string
 }
 
-declare interface BankInfoProps {
+declare type BankInfoProps = {
    account: Account
    appwriteItemId?: string
    type: "full" | "card"
 }
 
-declare interface PageHeaderProps {
+declare type PageHeaderProps = {
    topTitle: string
    bottomTitle: string
    topDescription: string
@@ -126,125 +127,57 @@ declare interface PageHeaderProps {
    connectBank?: boolean
 }
 
-declare interface PaginationProps {
+declare type PaginationProps = {
    page: number
    totalPages: number
 }
 
-declare interface PlaidLinkProps {
+declare type PlaidLinkProps = {
    user: User
    variant?: "primary" | "ghost"
    dwollaCustomerId?: string
 }
 
-declare interface BankDropdownProps {
+declare type BankDropdownProps = {
    accounts: Account[]
    setValue?: UseFormSetValue<any>
    otherStyles?: string
 }
 
-declare interface BankTabItemProps {
+declare type BankTabItemProps = {
    account: Account
    appwriteItemId?: string
 }
 
-declare interface FooterProps {
+declare type FooterProps = {
    user: User
    type?: "mobile" | "desktop"
 }
 
-declare interface RecentTransactionsProps {
+declare type RecentTransactionsProps = {
    accounts: Account[]
    transactions: Transaction[]
    appwriteItemId: string
    page: number
 }
 
-declare interface TransactionHistoryTableProps {
+declare type TransactionHistoryTableProps = {
    transactions: Transaction[]
    page: number
 }
 
-declare interface CategoryBadgeProps {
+declare type CategoryBadgeProps = {
    category: string
 }
 
-declare interface TransactionTableProps {
+declare type TransactionTableProps = {
    transactions: Transaction[]
 }
 
-declare interface CategoryProps {
+declare type CategoryProps = {
    category: CategoryCount
 }
 
-declare interface PaymentTransferFormProps {
+declare type PaymentTransferFormProps = {
    accounts: Account[]
-}
-
-// Actions
-declare interface getAccountsProps {
-   userId: string
-}
-
-declare interface getAccountProps {
-   appwriteItemId: string
-}
-
-declare interface getInstitutionProps {
-   institutionId: string
-}
-
-declare interface getTransactionsProps {
-   accessToken: string
-}
-
-declare interface CreateFundingSourceOptions {
-   customerId: string // Dwolla Customer ID
-   fundingSourceName: string // Dwolla Funding Source Name
-   plaidToken: string // Plaid Account Processor Token
-   _links: object // Dwolla On Demand Authorization Link
-}
-
-declare interface CreateTransactionProps {
-   name: string
-   amount: string
-   senderId: string
-   senderBankId: string
-   receiverId: string
-   receiverBankId: string
-   email: string
-}
-
-declare interface getTransactionsByBankIdProps {
-   bankId: string
-}
-
-declare interface getUserInfoProps {
-   userId: string
-}
-
-declare interface exchangePublicTokenProps {
-   publicToken: string
-   user: User
-}
-
-declare interface createBankAccountProps {
-   accessToken: string
-   userId: string
-   accountId: string
-   bankId: string
-   fundingSourceUrl: string
-   shareableId: string
-}
-
-declare interface getBanksProps {
-   userId: string
-}
-
-declare interface getBankProps {
-   documentId: string
-}
-
-declare interface getBankByAccountIdProps {
-   accountId: string
 }
