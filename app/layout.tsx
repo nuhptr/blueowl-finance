@@ -18,9 +18,9 @@ const ibmPlexSerif = IBM_Plex_Serif({
 
 // Metadata for SEO
 export const metadata: Metadata = {
-   title: "Horizon | Banking",
+   title: "BlueOwl | Finance App",
    description:
-      "Horizon is a modern banking platform for everyone. Integrated with the latest technologies to provide a seamless experience. Join us today!",
+      "BlueOwl is a modern banking platform for everyone. Integrated with the latest technologies to provide a seamless experience. Join us today!",
    icons: { icon: "/icons/ic_logo.svg" }, // favicon
 }
 
