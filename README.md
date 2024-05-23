@@ -72,3 +72,7 @@ npx shadcn-ui@latest add sheet (@radix-ui/react-dialog)
 npx shadcn-ui@latest add form (@hookform/resolvers, @radix-ui/react-label, react-hook-form)
 npx shadcn-ui@latest add ...
 ```
+
+## SSR Login Appwrite authentication flow
+
+open `https://appwrite.io/docs/tutorials/nextjs-ssr-auth/` and follow the steps
