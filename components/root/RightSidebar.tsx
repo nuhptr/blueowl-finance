@@ -1,6 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 
+import { BankCard } from "@/components/root/BankCard"
+
 export function RightSidebar({ user, transactions, banks }: RightSidebarProps) {
    return (
       <aside className="right-sidebar">
@@ -10,33 +12,46 @@ export function RightSidebar({ user, transactions, banks }: RightSidebarProps) {
 
             <div className="profile">
                <div className="profile-img">
-                  <span className="text-5xl font-bold text-blue-500">{user.firstName[0]}</span>
+                  <span className="text-5xl font-bold text-blue-500">{user?.firstName}</span>
                </div>
-
                <div className="profile-details">
                   <h1 className="profile-name">
-                     {user.firstName} {user.lastName}
+                     {user?.firstName} {user?.lastName}
                   </h1>
-                  <p className="profile-email">{user.email}</p>
+                  <p className="profile-email">{user?.email}</p>
                </div>
             </div>
          </section>
 
          {/* Banks */}
          <section className="banks">
-            <div className="flex w-full justify-between">
+            <div className="flex justify-between w-full">
                <h2 className="header-2">My Banks</h2>
                <Link href="/" className="flex gap-2">
                   <Image src="/icons/ic_plus.svg" alt="plus icon" width={20} height={20} />
-                  <h2 className="text-14 font-semibold text-gray-600">Add Bank</h2>
+                  <h2 className="font-semibold text-gray-600 text-14">Add Bank</h2>
                </Link>
             </div>
 
             {banks?.length > 0 && (
-               <div className="relative flex flex-1 flex-col items-center justify-center gap-5">
-                  <div className="relative z-10">Bank Card 1</div>
+               <div className="relative flex flex-col items-center justify-center flex-1 gap-5">
+                  <div className="relative z-10">
+                     <BankCard
+                        key={banks[0].$id}
+                        account={banks[0]}
+                        userName={user?.name}
+                        showBalance={false}
+                     />
+                  </div>
                   {banks[1] && (
-                     <div className="absolute right-0 top-8 z-0 w-[90%]">Bank Card 2</div>
+                     <div className="absolute right-0 top-8 z-0 w-[90%]">
+                        <BankCard
+                           key={banks[1].$id}
+                           account={banks[1]}
+                           userName={user?.name}
+                           showBalance={false}
+                        />
+                     </div>
                   )}
                </div>
             )}

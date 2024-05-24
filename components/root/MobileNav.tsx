@@ -8,6 +8,7 @@ import { sidebarLinks } from "@/constant"
 import { cn } from "@/lib/utils"
 
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from "../ui/sheet"
+import { Footer } from "./Footer"
 
 export function MobileNav({ user }: MobileNavProps) {
    const pathname = usePathname()
@@ -25,7 +26,7 @@ export function MobileNav({ user }: MobileNavProps) {
                />
             </SheetTrigger>
             <SheetContent side="left" className="bg-white border-none">
-               <Link href="/" className="flex items-center gap-1 px-4 cursor-pointer">
+               <Link href="/" className="flex items-center px-4 cursor-pointer gap-1">
                   <Image
                      src="/icons/ic_logo.svg"
                      alt="horizon logo"
@@ -38,7 +39,7 @@ export function MobileNav({ user }: MobileNavProps) {
 
                <div className="mobilenav-sheet">
                   <SheetClose asChild>
-                     <nav className="flex flex-col h-full gap-6 pt-16 text-white">
+                     <nav className="flex flex-col h-full pt-16 text-white gap-6">
                         {sidebarLinks.map((link) => {
                            const isActive =
                               pathname === link.route || pathname.startsWith(`${link.route}/`)
@@ -73,7 +74,7 @@ export function MobileNav({ user }: MobileNavProps) {
                      </nav>
                   </SheetClose>
 
-                  {/* FOOTER */}
+                  <Footer user={user} type="mobile" />
                </div>
             </SheetContent>
          </Sheet>

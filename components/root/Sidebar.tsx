@@ -7,6 +7,8 @@ import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { sidebarLinks } from "@/constant"
 
+import { Footer } from "@/components/root/Footer"
+
 /** `user` props in root.d.ts */
 export function Sidebar({ user }: SidebarProps) {
    const pathname = usePathname()
@@ -14,7 +16,7 @@ export function Sidebar({ user }: SidebarProps) {
    return (
       <section className="sidebar">
          <nav className="flex flex-col gap-4">
-            <Link href="/" className="flex items-center mb-12 cursor-pointer gap-2">
+            <Link href="/" className="flex items-center gap-2 mb-12 cursor-pointer">
                <Image
                   src="/icons/ic_logo.svg"
                   width={34}
@@ -22,7 +24,7 @@ export function Sidebar({ user }: SidebarProps) {
                   alt="Horizon Logo"
                   className="size-[24px] max-xl:size-14"
                />
-               <h1 className="sidebar-logo">Horizon</h1>
+               <h1 className="sidebar-logo">BlueOwl</h1>
             </Link>
             {sidebarLinks.map((link) => {
                const isActive = pathname === link.route || pathname.startsWith(`${link.route}/`)
@@ -50,7 +52,7 @@ export function Sidebar({ user }: SidebarProps) {
             {/* USER */}
          </nav>
 
-         {/* FOOTER */}
+         <Footer user={user} />
       </section>
    )
 }
