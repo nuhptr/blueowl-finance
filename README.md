@@ -76,3 +76,9 @@ npx shadcn-ui@latest add ...
 ## SSR Login Appwrite authentication flow
 
 open `https://appwrite.io/docs/tutorials/nextjs-ssr-auth/` and follow the steps
+
+## Sentry
+
+Install `npx @sentry/wizard@latest -i nextjs` and will show interactive wizard to setup Sentry
+
+and will install `@sentry/nextjs@^8` and continue wizard setup
