@@ -4,6 +4,18 @@ Build a banking dashboard with integrated account banking and show the user's tr
 
 <!-- Image goes here -->
 
+## Table of Contents
+
+- [Horizon Banking Dashboard](#horizon-banking-dashboard)
+  - [Table of Contents](#table-of-contents)
+  - [Getting Started](#getting-started)
+  - [Features](#features)
+  - [Tech Stack](#tech-stack)
+  - [Dependencies](#dependencies)
+  - [ShadcnUI](#shadcnui)
+  - [SSR Login Appwrite authentication flow](#ssr-login-appwrite-authentication-flow)
+  - [Sentry](#sentry)
+
 ## Getting Started
 
 -  Clone the repository
@@ -39,6 +51,8 @@ bun dev
 ## Dependencies
 
 -  [Plaid](https://plaid.com/) - API for banking data, sandbox mode (bun add plaid)
+-  [React Plaid Link](https://www.npmjs.com/package/react-plaid-link) - React component for Plaid Link (bun add react-plaid-link)
+-  [Dwolla-v2](https://www.npmjs.com/package/dwolla-v2) - Dwolla API client for Node.js (bun add dwolla-v2)
 -  [Node Appwrite](https://appwrite.io/) - Backend as a service (bun add node-appwrite)
 -  [Zod](https://www.npmjs.com/package/zod) - TypeScript-first schema declaration and validation library (bun add zod)
 -  [Query String](https://www.npmjs.com/package/query-string) - Parse and stringify URL query strings (bun add query-string)
