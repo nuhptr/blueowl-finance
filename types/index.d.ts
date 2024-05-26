@@ -88,31 +88,6 @@ declare type Receiver = {
    lastName: string
 }
 
-declare type TransferParams = {
-   sourceFundingSourceUrl: string
-   destinationFundingSourceUrl: string
-   amount: string
-}
-
-declare type AddFundingSourceParams = {
-   dwollaCustomerId: string
-   processorToken: string
-   bankName: string
-}
-
-declare type NewDwollaCustomerParams = {
-   firstName: string
-   lastName: string
-   email: string
-   type: string
-   address1: string
-   city: string
-   state: string
-   postalCode: string
-   dateOfBirth: string
-   ssn: string
-}
-
 declare type BankInfoProps = {
    account: Account
    appwriteItemId?: string
@@ -130,12 +105,6 @@ declare type PageHeaderProps = {
 declare type PaginationProps = {
    page: number
    totalPages: number
-}
-
-declare type PlaidLinkProps = {
-   user: User
-   variant?: "primary" | "ghost"
-   dwollaCustomerId?: string
 }
 
 declare type BankDropdownProps = {

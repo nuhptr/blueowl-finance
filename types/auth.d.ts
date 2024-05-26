@@ -4,15 +4,14 @@ declare type AuthFormProps = {
 }
 
 declare type SignUpParams = {
-   //* make it optional
-   firstName?: string
-   lastName?: string
-   address1?: string
-   city?: string
-   state?: string
-   postalCode?: string
-   dateOfBirth?: string
-   ssn?: string
+   firstName: string
+   lastName: string
+   address1: string
+   city: string
+   state: string
+   postalCode: string
+   dateOfBirth: string
+   ssn: string
    email: string
    password: string
 }
@@ -25,4 +24,10 @@ declare type LoginUser = {
 declare type signInProps = {
    email: string
    password: string
+}
+
+declare type PlaidLinkProps = {
+   user: User
+   variant?: "primary" | "ghost"
+   dwollaCustomerId?: string
 }
